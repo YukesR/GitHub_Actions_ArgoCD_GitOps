@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: yuksr/demo-app:v1
+        image: yuksr/demo-app:latest  # ← Changed from v1 to latest
         ports:
         - containerPort: 3000
-
