@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app-deployment
+  name: demoapp-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: node-app
+      app: demoapp
   template:
     metadata:
       labels:
-        app: node-app
+        app: demoapp
     spec:
       containers:
-      - name: node-app
+      - name: demoapp
         image: yuksr/demo-app:v1.6 # ← Changed from v1 to latest
         ports:
         - containerPort: 3000
